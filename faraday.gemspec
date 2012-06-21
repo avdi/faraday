@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.5") if s.respond_to? :required_rubygems_version=
 
   s.name    = 'avdi-faraday'
-  s.version = '0.8.0.avdi'
+  s.version = '0.8.0'
 
   s.summary     = "Avdi's personal fork of Faraday. Nothing to see here. Move along."
   s.description = "Just a fork so I can satisfy gem dependencies in Leadlight."
