@@ -48,8 +48,8 @@ desc "Commit, create tag v#{version} and build and push #{gem_file} to Rubygems"
 task :release => :build do
   sh "git commit --allow-empty -a -m 'Release #{version}'"
   sh "git tag v#{version}-avdi"
-  sh "git push origin"
-  sh "git push origin v#{version}"
+  sh "git push avdi"
+  sh "git push avdi v#{version}"
   sh "gem push pkg/#{gem_file}"
 end
 
