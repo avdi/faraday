@@ -5,12 +5,12 @@ Gem::Specification.new do |s|
   s.name    = 'faraday'
   s.version = '0.8.0'
 
-  s.summary     = "HTTP/REST API client library."
-  # TODO: s.description
+  s.summary     = "Avdi's personal fork of Faraday. Nothing to see here. Move along."
+  s.description = "Just a fork so I can satisfy gem dependencies in Leadlight."
 
-  s.authors  = ["Rick Olson"]
-  s.email    = 'technoweenie@gmail.com'
-  s.homepage = 'https://github.com/technoweenie/faraday'
+  s.authors  = ["Rick Olson", "Avdi Grimm"]
+  s.email    = 'avdi@avdi.org'
+  s.homepage = 'https://github.com/avdi/faraday'
 
   s.add_dependency 'multipart-post', '~> 1.1'
   s.add_development_dependency 'rake'
@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
     lib/faraday/adapter/em_synchrony.rb
     lib/faraday/adapter/em_synchrony/parallel_manager.rb
     lib/faraday/adapter/excon.rb
+    lib/faraday/adapter/httpclient.rb
     lib/faraday/adapter/net_http.rb
     lib/faraday/adapter/net_http_persistent.rb
     lib/faraday/adapter/patron.rb
@@ -54,10 +55,12 @@ Gem::Specification.new do |s|
     lib/faraday/response/raise_error.rb
     lib/faraday/upload_io.rb
     lib/faraday/utils.rb
+    script/test
     test/adapters/default_test.rb
     test/adapters/em_http_test.rb
     test/adapters/em_synchrony_test.rb
     test/adapters/excon_test.rb
+    test/adapters/httpclient_test.rb
     test/adapters/integration.rb
     test/adapters/logger_test.rb
     test/adapters/net_http_persistent_test.rb
@@ -73,6 +76,7 @@ Gem::Specification.new do |s|
     test/live_server.rb
     test/middleware/retry_test.rb
     test/middleware_stack_test.rb
+    test/middleware_test.rb
     test/request_middleware_test.rb
     test/response_middleware_test.rb
   ]
