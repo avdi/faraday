@@ -9,6 +9,10 @@ def name
   @name ||= Dir['*.gemspec'].first.split('.').first
 end
 
+def gem_name
+  'avdi-faraday'
+end
+
 def version
   line = File.read("lib/#{name}.rb")[/^\s*VERSION\s*=\s*.*/]
   line.match(/.*VERSION\s*=\s*['"](.*)['"]/)[1]
@@ -63,7 +67,7 @@ task :gemspec do
   head, manifest, tail = spec.split("  # = MANIFEST =\n")
 
   # replace name version and date
-  replace_header(head, :name)
+  replace_header(head, :gem_name)
   replace_header(head, :version)
 
   # determine file list from git ls-files
